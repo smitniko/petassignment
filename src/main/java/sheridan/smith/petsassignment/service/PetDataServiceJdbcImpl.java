@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class PetDataServiceJdbcImpl implements PetDataService {
 
     PetDataRepositoryJdbc petDataRepositoryJdbc;
@@ -22,7 +23,7 @@ public class PetDataServiceJdbcImpl implements PetDataService {
         pet.setLastName(form.getLastName());
         pet.setPetType(form.getPetType());
         pet.setPetGender(form.getPetGender());
-        pet.setPetVaccination(form.isPetVaccinated());
+        pet.setPetVaccination(form.isPetVaccination());
     }
 
     private static void copyEntityToForm(PetEntityJdbc pet, PetForm form){
@@ -31,7 +32,7 @@ public class PetDataServiceJdbcImpl implements PetDataService {
         form.setLastName(pet.getLastName());
         form.setPetType(pet.getPetType());
         form.setPetGender(pet.getPetGender());
-        form.setPetVaccination(pet.isPetVaccinated());
+        form.setPetVaccination(pet.isPetVaccination());
     }
 
 

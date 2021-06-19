@@ -37,7 +37,7 @@ public class PetDataRepositoryJdbcImpl implements PetDataRepositoryJdbc {
         params.addValue("last_name", pet.getLastName().trim());
         params.addValue("pet_type", pet.getPetType());
         params.addValue("pet_gender", pet.getPetGender());
-        params.addValue("pet_vaccination", pet.isPetVaccinated());
+        params.addValue("pet_vaccination", pet.isPetVaccination());
         namedParameterJdbcTemplate.update(update, params, keys);
         pet.setId(keys.getKey()!=null?keys.getKey().intValue():0);
     }

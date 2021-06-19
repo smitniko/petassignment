@@ -58,7 +58,7 @@ public class PetDataController {
             return "AddPet";
         } else {
             logger.trace("the user inputs are correct");
-            pettDataService.insertPetForm(form);
+            petDataService.insertPetForm(form);
             return "redirect:ConfirmInsert/" + form.getId();
         }
     }
